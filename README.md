@@ -1,4 +1,4 @@
-# DC-Space-Channel-5-Part-2
+# DC-Space-Channel-5-Part-2-Kr
 
 ## 스페이스 채널 5 파트 2 · 비공식 한글판 정식 버전 V1.1
 
@@ -8,7 +8,7 @@
 
 Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 엔딩 가사를 한국어로 즐길 수 있도록 만든 비공식 패치입니다. 원래 음성과 영문 로고의 분위기를 살리고, 게임 안에 한국어 표시와 **6단계 판정 설정**을 추가했습니다.
 
-**[V1.1 다운로드](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2/releases/tag/v1.1)** · **[패치 ZIP 바로 받기](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2/releases/download/v1.1/DC-Space-Channel-5-Part-2-v1.1-Patch.zip)**
+**[V1.1 다운로드](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.1)** · **[패치 ZIP 바로 받기](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/download/v1.1/DC-Space-Channel-5-Part-2-v1.1-Patch.zip)**
 
 [설치 방법](docs/INSTALL.md) · [판정 설정 상세](docs/JUDGMENT.md) · [스크린샷 16장](docs/GALLERY.md) · [패치 전후 해시](docs/HASHES.md) · [변경 내역](CHANGELOG.md)
 
@@ -39,7 +39,7 @@ Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 
 
 ## 적용 방법
 
-1. [릴리스](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2/releases/tag/v1.1)에서 **`DC-Space-Channel-5-Part-2-v1.1-Patch.zip`**을 받습니다.
+1. [릴리스](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.1)에서 **`DC-Space-Channel-5-Part-2-v1.1-Patch.zip`**을 받습니다.
 2. ZIP을 전부 압축 해제하고 **`SC5Part2KoreanPatch_v1.1.exe`**를 실행합니다.
 3. 원본 CUE를 선택합니다. 같은 폴더에 원본 BIN 3개가 있어야 합니다.
 4. 원본 폴더 밖의 **아직 없는 새 결과 폴더**를 지정하고 **패치 적용**을 누릅니다.
@@ -154,7 +154,7 @@ ZIP 해시와 게임 이미지 해시는 별개입니다. CHD/GDI로 변환한 �
 
 - 일반 Flycast 코어에서 기존 판정 메뉴와 VMU 저장·복원 시험 기록을 확보했습니다. 실기·ODE 호환 여부는 별도 확인 대상입니다.
 - 이번 V1.1 배포 검사는 최종 패치 적용과 결과 파일 일치 여부를 중심으로 진행했습니다. 상세 범위는 [검증 기록](docs/VERIFICATION.md)에 적었습니다.
-- 자막이나 표시 문제는 [Issues](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2/issues)에 스테이지, 발생 위치, 직전 대사와 스크린샷을 남겨 주세요. 실행 중인 Track 3 해시도 함께 있으면 버전을 구분하기 좋습니다.
+- 자막이나 표시 문제는 [Issues](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/issues)에 스테이지, 발생 위치, 직전 대사와 스크린샷을 남겨 주세요. 실행 중인 Track 3 해시도 함께 있으면 버전을 구분하기 좋습니다.
 - 이 저장소의 V1.1은 비공식 한글 패치의 배포 버전입니다. SEGA 공식 한국어판을 의미하지 않습니다.
 
 ## 크레딧

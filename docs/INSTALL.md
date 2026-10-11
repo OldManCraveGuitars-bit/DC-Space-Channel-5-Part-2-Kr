@@ -3,7 +3,7 @@
 ## 준비물
 
 - Dreamcast 일본판 **Space Channel 5 Part 2 (Japan)**의 원본 CUE 1개와 BIN 3개.
-- [V1.1 릴리스](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2/releases/tag/v1.1)의 **`DC-Space-Channel-5-Part-2-v1.1-Patch.zip`**.
+- [V1.1 릴리스](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.1)의 **`DC-Space-Channel-5-Part-2-v1.1-Patch.zip`**.
 - Windows와 .NET Framework 4.x 실행 환경.
 - 결과 이미지를 만들 여유 공간 약 **2GB 이상**. 결과 4개 파일의 합계는 1,189,818,384바이트입니다.
 
