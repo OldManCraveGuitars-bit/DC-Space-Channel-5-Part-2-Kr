@@ -13,8 +13,8 @@ using System.Windows.Forms;
 // Original files are opened for reading only. A new folder is published only
 // after every result hash matches; existing output folders are never replaced.
 internal static class PatchApplier {
-    const string PatchHash = "0e2976bf46545ab33a5bb351a976ff8eef8e51976d6b51ec87a6140b56ee1284";
-    const string BuildLabel = "비공식 한글판 정식 버전 V1.1";
+    const string PatchHash = "1eeee0f78d85a57edd999f659c28e09de3b84671a6e1a8f589602e5c497b9933";
+    const string BuildLabel = "비공식 한글판 정식 버전 V1.101";
     const long PatchBytes = 30295187L;
     sealed class Range { public long Offset, SourceOffset = -1; public int Length; public byte[] Bytes; }
     sealed class FilePatch {
@@ -89,7 +89,46 @@ internal static class PatchApplier {
             }
         }
     }
-    static object Apply(string patch, string source, string output, Action<string> progress) {
+    // This layout is specific to the hash-pinned three-track Japanese dump.
+    // INDEX 01 of track 2 follows its 150-sector pregap. Keep audio bytes in
+    // their original order and preserve the high-density start at LBA 45000.
+    static List<object> ConvertToGdi(string folder, List<FilePatch> files, Action<string> progress) {
+        const string prefix = "Space Channel 5 Part 2 (Japan)";
+        const string gdi = "3\n1 0 4 2352 track01.bin 0\n2 992 0 2352 track02.raw 0\n3 45000 4 2352 track03.bin 0\n";
+        const string audioHash = "ced05b98c256a32b3d0f1c565834726c378d059245496051f4896af82dbd5a97";
+        const string gdiHash = "abb78c115a0179dfc2af5271817eb97e18baa2704253bac821bb44d8def5d5f7";
+        string audioSource = Path.Combine(folder, prefix + " (Track 2).bin");
+        string audioResult = Path.Combine(folder, "track02.raw");
+        progress("ODE용 GDI 구성: 트랙과 프리갭 정리");
+        using (var source = File.OpenRead(audioSource))
+        using (var target = new FileStream(audioResult, FileMode.CreateNew, FileAccess.Write, FileShare.None)) {
+            if (source.Length != 2076816) throw new InvalidDataException("Track 2 크기가 다릅니다.");
+            source.Position = 150L * 2352;
+            source.CopyTo(target); target.Flush(true);
+        }
+        if (new FileInfo(audioResult).Length != 1724016 || Hash(audioResult, progress) != audioHash)
+            throw new InvalidDataException("GDI 오디오 트랙 검사 실패");
+        string descriptor = Path.Combine(folder, "disc.gdi");
+        File.WriteAllText(descriptor, gdi, new UTF8Encoding(false));
+        if (Hash(descriptor, progress) != gdiHash) throw new InvalidDataException("GDI 설명 파일 검사 실패");
+        var result = new List<object>();
+        foreach (var f in files) {
+            string name = f.Name == prefix + " (Track 1).bin" ? "track01.bin" : f.Name == prefix + " (Track 3).bin" ? "track03.bin" : null;
+            if (name == null) continue;
+            File.Move(Path.Combine(folder, f.Name), Path.Combine(folder, name));
+            result.Add(new { name = name, size = f.Size, sha256 = f.ResultHash });
+        }
+        if (result.Count != 2) throw new InvalidDataException("GDI 데이터 트랙 구성 실패");
+        // Remove only redundant files created by this invocation in its new
+        // temporary directory. The original source folder is never mutated.
+        File.Delete(audioSource);
+        File.Delete(Path.Combine(folder, prefix + ".cue"));
+        result.Add(new { name = "track02.raw", size = 1724016, sha256 = audioHash });
+        result.Add(new { name = "disc.gdi", size = 83, sha256 = gdiHash });
+        return result;
+    }
+    static object Apply(string patch, string source, string output, string format, Action<string> progress) {
+        if (format != "cue" && format != "gdi") throw new ArgumentException("출력 형식은 cue 또는 gdi입니다.");
         source = Path.GetFullPath(File.Exists(source) ? Path.GetDirectoryName(source) : source).TrimEnd(Path.DirectorySeparatorChar);
         output = Path.GetFullPath(output).TrimEnd(Path.DirectorySeparatorChar);
         if (!Directory.Exists(source)) throw new DirectoryNotFoundException("원본 폴더를 찾을 수 없습니다.");
@@ -134,13 +173,14 @@ internal static class PatchApplier {
                 throw new InvalidDataException("결과 검사가 실패했습니다. 작업 폴더: " + temporary);
             results.Add(new { name = f.Name, size = f.Size, sha256 = f.ResultHash, changed_ranges = f.Ranges.Count });
         }
+        if (format == "gdi") results = ConvertToGdi(temporary, files, progress);
         Directory.Move(temporary, output);
         progress("완료: " + output);
         return new { status = "passed", build = BuildLabel, source = source, output = output,
-            patch_sha256 = PatchHash, originals_opened_read_only = true, all_result_hashes_verified = true, files = results };
+            format = format, patch_sha256 = PatchHash, originals_opened_read_only = true, all_result_hashes_verified = true, files = results };
     }
     static Form Window() {
-        var form = new Form { Text = "스페이스 채널 5 파트 2 한국어 패치", ClientSize = new Size(610, 360),
+        var form = new Form { Text = "스페이스 채널 5 파트 2 한국어 패치", ClientSize = new Size(610, 405),
             Font = new Font("맑은 고딕", 10), FormBorderStyle = FormBorderStyle.FixedDialog, MaximizeBox = false,
             StartPosition = FormStartPosition.CenterScreen };
         var header = new Label { Text = "한국어 패치 · " + BuildLabel, Location = new Point(20, 15), AutoSize = true };
@@ -151,24 +191,28 @@ internal static class PatchApplier {
         var outLabel = new Label { Text = "새 결과 폴더", Location = new Point(20, 165), AutoSize = true };
         var output = new TextBox { Location = new Point(20, 190), Size = new Size(470, 27) };
         var outBrowse = new Button { Text = "위치 선택", Location = new Point(500, 187), Size = new Size(90, 32) };
-        var status = new Label { Text = "원본과 결과 위치를 선택하세요.", Location = new Point(20, 235), Size = new Size(570, 55) };
-        var apply = new Button { Text = "패치 적용", Location = new Point(450, 303), Size = new Size(140, 37) };
-        form.Controls.AddRange(new Control[] { header, note, sourceLabel, source, browse, outLabel, output, outBrowse, status, apply });
+        var formatLabel = new Label { Text = "출력 형식", Location = new Point(20, 238), AutoSize = true };
+        var format = new ComboBox { Location = new Point(105, 234), Size = new Size(485, 28), DropDownStyle = ComboBoxStyle.DropDownList };
+        format.Items.AddRange(new object[] { "GDI · GDEMU / MODE 등 ODE용", "CUE + BIN · 기존 형식" });
+        format.SelectedIndex = 0;
+        var status = new Label { Text = "원본과 결과 위치를 선택하세요.", Location = new Point(20, 280), Size = new Size(570, 55) };
+        var apply = new Button { Text = "패치 적용", Location = new Point(450, 348), Size = new Size(140, 37) };
+        form.Controls.AddRange(new Control[] { header, note, sourceLabel, source, browse, outLabel, output, outBrowse, formatLabel, format, status, apply });
         browse.Click += delegate { using (var dialog = new OpenFileDialog { Filter = "Dreamcast CUE (*.cue)|*.cue", CheckFileExists = true }) if (dialog.ShowDialog(form) == DialogResult.OK) source.Text = dialog.FileName; };
         outBrowse.Click += delegate { using (var dialog = new FolderBrowserDialog { Description = "결과 폴더를 만들 상위 위치를 선택하세요." }) if (dialog.ShowDialog(form) == DialogResult.OK) output.Text = Path.Combine(dialog.SelectedPath, "Space Channel 5 Part 2 - KR"); };
         apply.Click += delegate {
             if (String.IsNullOrWhiteSpace(source.Text) || String.IsNullOrWhiteSpace(output.Text)) { status.Text = "원본과 결과 위치를 입력하세요."; return; }
-            string src = source.Text, dst = output.Text;
+            string src = source.Text, dst = output.Text, selectedFormat = format.SelectedIndex == 0 ? "gdi" : "cue";
             var worker = new BackgroundWorker { WorkerReportsProgress = true };
-            apply.Enabled = browse.Enabled = outBrowse.Enabled = source.Enabled = output.Enabled = false;
+            apply.Enabled = browse.Enabled = outBrowse.Enabled = source.Enabled = output.Enabled = format.Enabled = false;
             form.ControlBox = false;
             worker.DoWork += delegate(object sender, DoWorkEventArgs e) {
-                e.Result = Apply(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SC5P2KR.patch.gz"), src, dst, delegate(string s) { worker.ReportProgress(0, s); });
+                e.Result = Apply(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SC5P2KR.patch.gz"), src, dst, selectedFormat, delegate(string s) { worker.ReportProgress(0, s); });
             };
             worker.ProgressChanged += delegate(object sender, ProgressChangedEventArgs e) { status.Text = (string)e.UserState; };
             worker.RunWorkerCompleted += delegate(object sender, RunWorkerCompletedEventArgs e) {
-                apply.Enabled = browse.Enabled = outBrowse.Enabled = source.Enabled = output.Enabled = true; form.ControlBox = true;
-                status.Text = e.Error == null ? "완료했습니다. 결과 폴더의 CUE를 실행하세요.\n" + dst : e.Error.Message;
+                apply.Enabled = browse.Enabled = outBrowse.Enabled = source.Enabled = output.Enabled = format.Enabled = true; form.ControlBox = true;
+                status.Text = e.Error == null ? (selectedFormat == "gdi" ? "완료했습니다. 결과 폴더의 파일 4개를 ODE에 복사하세요.\n" : "완료했습니다. 결과 폴더의 CUE를 실행하세요.\n") + dst : e.Error.Message;
                 worker.Dispose();
             };
             worker.RunWorkerAsync();
@@ -186,7 +230,7 @@ internal static class PatchApplier {
         // overwriting an existing file, including an original ROM track.
         using (var file = new FileStream(report, FileMode.CreateNew, FileAccess.Write, FileShare.None)) {
             object result; int code;
-            try { result = Apply(args[1], args[2], args[3], delegate(string s) {}); code = 0; }
+            try { result = Apply(args[1], args[2], args[3], args.Length == 6 ? args[5].ToLowerInvariant() : "cue", delegate(string s) {}); code = 0; }
             catch (Exception e) { result = new { status = "rejected", error = e.Message }; code = 1; }
             byte[] raw = new UTF8Encoding(false).GetBytes(new JavaScriptSerializer().Serialize(result));
             file.Write(raw, 0, raw.Length); file.Flush(true); return code;
@@ -194,7 +238,7 @@ internal static class PatchApplier {
     }
     [STAThread] static int Main(string[] args) {
         try {
-            if (args.Length == 5 && args[0] == "--apply") {
+            if ((args.Length == 5 || args.Length == 6) && args[0] == "--apply") {
                 return ApplyCli(args);
             }
             if (args.Length == 2 && args[0] == "--render-ui") {
@@ -211,7 +255,7 @@ internal static class PatchApplier {
             if (args.Length != 0) throw new ArgumentException("지원하지 않는 실행 옵션입니다.");
             Application.EnableVisualStyles(); Application.SetCompatibleTextRenderingDefault(false); Application.Run(Window()); return 0;
         } catch (Exception e) {
-            if (!(args.Length == 5 && args[0] == "--apply")) MessageBox.Show(e.Message, "패치 적용 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (!((args.Length == 5 || args.Length == 6) && args[0] == "--apply")) MessageBox.Show(e.Message, "패치 적용 실패", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return 1;
         }
     }

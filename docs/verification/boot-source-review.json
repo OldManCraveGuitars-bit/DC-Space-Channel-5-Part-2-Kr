@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "candidate_manifest_sha256": "773c180185b737cd588d556bf3eb48775f06783e12a6b4eed4bfc7f7c9dff427",
+  "root_source_and_SH4_review_completed": true,
+  "original_font_instructions_semantically_identical": 28,
+  "actual_bootstrap_and_sdk_instructions_executed_in_bounded_model": true,
+  "model_instruction_counts": [
+    15346,
+    15346,
+    15346
+  ],
+  "D_writeback_before_first_P2_fetch": true,
+  "I_invalidation_before_P1_entry": true,
+  "PR_SP_font_argument_callee_saved_registers_preserved": true,
+  "all_caption_table_bytes_identical": true,
+  "payload_bss_below_heap": true,
+  "hardware_tested": false,
+  "emulator_gameplay_or_audio_QA": false,
+  "limitation": "Instruction model verifies sequence/registers, not physical SH4 cache timing or ODE firmware.",
+  "verifier_sha256": "3e34e51896a462af15b7ea797b65db9d2b48896c89ec1e2c1dfc766af8a8aeba"
+}

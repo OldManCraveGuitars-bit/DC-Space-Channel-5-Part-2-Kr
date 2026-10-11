@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "candidate_core_manifest_sha256": "773c180185b737cd588d556bf3eb48775f06783e12a6b4eed4bfc7f7c9dff427",
+  "trial_track_sha256": "5217c7f807825f411e886ac4d76c6c60e7975589aae0dd2b1a9d23568560f435",
+  "changed_lbas": [
+    45025,
+    45128,
+    45129,
+    45130,
+    45131,
+    45132,
+    45133,
+    45134,
+    45135,
+    45136,
+    45137,
+    45138,
+    45139,
+    45140,
+    45141,
+    45142,
+    45143,
+    45144,
+    45145,
+    45146,
+    548450
+  ],
+  "changed_assets": {
+    "1ST_READ.BIN": "873b61a07030486142f2567efb693c92a973b9aa489b0169ed872ec9d4edde2b",
+    "ZENFONT.GD": "f21218c322728e121507e94ff5bfeb29b482bb9ef9280dc1ec787eb8ec7d0ab9"
+  },
+  "all_other_raw_sectors_exact": true,
+  "IP_BIN_exact": true,
+  "all_ISO_extents_preserved": true,
+  "preserved_ISO_files": 251,
+  "main_bootstrap_only_changed": true,
+  "actual_hardware_tested": false,
+  "new_audio_playback_or_screen_QA": false
+}

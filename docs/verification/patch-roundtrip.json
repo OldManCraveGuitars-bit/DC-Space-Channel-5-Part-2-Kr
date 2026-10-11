@@ -1,11 +1,11 @@
 {
   "status": "passed",
-  "version": "1.1",
+  "version": "1.101",
   "windows_applier_executed": true,
   "source_files_preserved": true,
   "all_four_output_hashes_match": true,
-  "patch_sha256": "0e2976bf46545ab33a5bb351a976ff8eef8e51976d6b51ec87a6140b56ee1284",
-  "applier_sha256": "73ab9576429fa42c0c24082ffb4328402043a18da153829c3cb5c1e9bd591d88",
+  "patch_sha256": "1eeee0f78d85a57edd999f659c28e09de3b84671a6e1a8f589602e5c497b9933",
+  "applier_sha256": "a61ca12b57fc80c27fbe63e7bbe451a75019892d771c282b6fc6e24883767f4a",
   "files": [
     {
       "name": "Space Channel 5 Part 2 (Japan) (Track 1).bin",
@@ -29,7 +29,7 @@
       "name": "Space Channel 5 Part 2 (Japan) (Track 3).bin",
       "size": 1185760800,
       "before_sha256": "af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f",
-      "after_sha256": "3c73a2e38f7ce2b674d71ee230f71e84102232a78acb8863c6081166fb76e398",
+      "after_sha256": "5217c7f807825f411e886ac4d76c6c60e7975589aae0dd2b1a9d23568560f435",
       "changed_ranges": 25676,
       "replacement_bytes": 29960897,
       "copied_from_original_bytes": 0
@@ -44,5 +44,31 @@
       "copied_from_original_bytes": 0
     }
   ],
-  "new_gameplay_or_audio_QA": false
+  "new_gameplay_or_audio_QA": false,
+  "gdi_output_verified": true,
+  "gdi_files": [
+    {
+      "name": "disc.gdi",
+      "size": 83,
+      "sha256": "abb78c115a0179dfc2af5271817eb97e18baa2704253bac821bb44d8def5d5f7"
+    },
+    {
+      "name": "track01.bin",
+      "size": 1980384,
+      "sha256": "0253b2fb053cd253cec3a114be98359c6fc8c5be25c84acbfc3bcf732c2fbb17"
+    },
+    {
+      "name": "track02.raw",
+      "size": 1724016,
+      "sha256": "ced05b98c256a32b3d0f1c565834726c378d059245496051f4896af82dbd5a97"
+    },
+    {
+      "name": "track03.bin",
+      "size": 1185760800,
+      "sha256": "5217c7f807825f411e886ac4d76c6c60e7975589aae0dd2b1a9d23568560f435"
+    }
+  ],
+  "track2_pregap_sectors_removed": 150,
+  "high_density_start_lba": 45000,
+  "hardware_tested": false
 }

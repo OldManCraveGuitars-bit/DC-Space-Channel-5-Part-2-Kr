@@ -1,5 +1,5 @@
 {
-  "version": "1.1",
+  "version": "1.101",
   "algorithm": "SHA-256",
   "platform": "Dreamcast",
   "source": "Space Channel 5 Part 2 (Japan)",
@@ -20,13 +20,35 @@
       "name": "Space Channel 5 Part 2 (Japan) (Track 3).bin",
       "size": 1185760800,
       "before_sha256": "af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f",
-      "after_sha256": "3c73a2e38f7ce2b674d71ee230f71e84102232a78acb8863c6081166fb76e398"
+      "after_sha256": "5217c7f807825f411e886ac4d76c6c60e7975589aae0dd2b1a9d23568560f435"
     },
     {
       "name": "Space Channel 5 Part 2 (Japan).cue",
       "size": 384,
       "before_sha256": "055f8098a992cda53aaee073dea1c8aa0dd0211c273a0ad3f408f92afccf904f",
       "after_sha256": "055f8098a992cda53aaee073dea1c8aa0dd0211c273a0ad3f408f92afccf904f"
+    }
+  ],
+  "gdi_files": [
+    {
+      "name": "disc.gdi",
+      "size": 83,
+      "sha256": "abb78c115a0179dfc2af5271817eb97e18baa2704253bac821bb44d8def5d5f7"
+    },
+    {
+      "name": "track01.bin",
+      "size": 1980384,
+      "sha256": "0253b2fb053cd253cec3a114be98359c6fc8c5be25c84acbfc3bcf732c2fbb17"
+    },
+    {
+      "name": "track02.raw",
+      "size": 1724016,
+      "sha256": "ced05b98c256a32b3d0f1c565834726c378d059245496051f4896af82dbd5a97"
+    },
+    {
+      "name": "track03.bin",
+      "size": 1185760800,
+      "sha256": "5217c7f807825f411e886ac4d76c6c60e7975589aae0dd2b1a9d23568560f435"
     }
   ]
 }
