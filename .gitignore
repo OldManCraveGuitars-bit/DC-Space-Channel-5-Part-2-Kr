@@ -1,0 +1,17 @@
+# Keep complete disc images, BIOS and generated packages out of Git.
+*.bin
+*.BIN
+*.cue
+*.gdi
+*.chd
+*.iso
+*.cdi
+*.zip
+*.exe
+*.patch.gz
+*.vmu
+*.state
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db

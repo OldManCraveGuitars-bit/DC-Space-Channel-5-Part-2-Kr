@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "version": "1.1",
+  "windows_applier_executed": true,
+  "source_files_preserved": true,
+  "all_four_output_hashes_match": true,
+  "patch_sha256": "0e2976bf46545ab33a5bb351a976ff8eef8e51976d6b51ec87a6140b56ee1284",
+  "applier_sha256": "73ab9576429fa42c0c24082ffb4328402043a18da153829c3cb5c1e9bd591d88",
+  "files": [
+    {
+      "name": "Space Channel 5 Part 2 (Japan) (Track 1).bin",
+      "size": 1980384,
+      "before_sha256": "0253b2fb053cd253cec3a114be98359c6fc8c5be25c84acbfc3bcf732c2fbb17",
+      "after_sha256": "0253b2fb053cd253cec3a114be98359c6fc8c5be25c84acbfc3bcf732c2fbb17",
+      "changed_ranges": 0,
+      "replacement_bytes": 0,
+      "copied_from_original_bytes": 0
+    },
+    {
+      "name": "Space Channel 5 Part 2 (Japan) (Track 2).bin",
+      "size": 2076816,
+      "before_sha256": "98738afbc741875fcdb5e5fe695cadfb60e492b66820b1e901ba2254f226c203",
+      "after_sha256": "98738afbc741875fcdb5e5fe695cadfb60e492b66820b1e901ba2254f226c203",
+      "changed_ranges": 0,
+      "replacement_bytes": 0,
+      "copied_from_original_bytes": 0
+    },
+    {
+      "name": "Space Channel 5 Part 2 (Japan) (Track 3).bin",
+      "size": 1185760800,
+      "before_sha256": "af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f",
+      "after_sha256": "3c73a2e38f7ce2b674d71ee230f71e84102232a78acb8863c6081166fb76e398",
+      "changed_ranges": 25676,
+      "replacement_bytes": 29960897,
+      "copied_from_original_bytes": 0
+    },
+    {
+      "name": "Space Channel 5 Part 2 (Japan).cue",
+      "size": 384,
+      "before_sha256": "055f8098a992cda53aaee073dea1c8aa0dd0211c273a0ad3f408f92afccf904f",
+      "after_sha256": "055f8098a992cda53aaee073dea1c8aa0dd0211c273a0ad3f408f92afccf904f",
+      "changed_ranges": 0,
+      "replacement_bytes": 0,
+      "copied_from_original_bytes": 0
+    }
+  ],
+  "new_gameplay_or_audio_QA": false
+}

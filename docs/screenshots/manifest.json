@@ -1,0 +1,114 @@
+[
+  {
+    "file": "01-title.png",
+    "caption": "타이틀 · 한글판 표시",
+    "sha256": "570c695d1797c40b48d34185740a528c2d1570cd35d83ac1d33747b7d1024049",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "02-main-menu.png",
+    "caption": "메인 메뉴 · 의상실과 옵션 안내",
+    "sha256": "b6f6989c718082ded1e203fe8306077445a11f097529ca772e2da8ce7404e3a2",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "03-judgment-level1.png",
+    "caption": "판정 설정 · 원작 판정인 1단계",
+    "sha256": "f17af66d34276c6fcd0a438cfc6750107b8e41edd223b00c00900f57649fc6b8",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "04-judgment-level6.png",
+    "caption": "판정 설정 · 가장 넓은 6단계",
+    "sha256": "4de67d8e334eb2bd0bbdc3c4dd2bd3096ea3a7745c076ee86a10690d7d08d064",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "05-options-lyrics.png",
+    "caption": "옵션 · 가사와 판정 설정의 선택 색상",
+    "sha256": "72922023dfbd8495a09ead13ab50cf178eb26e8a5e4712e4cc704220c0c7aae9",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "06-report-select.png",
+    "caption": "리포트 선택 · 한국어 설명과 기록",
+    "sha256": "48af09c34839c17fb1d2366dce8dc2078b549220fd955cd51c0f9c09eadc06c5",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "07-costume.png",
+    "caption": "의상실 · 의상 이름과 설명",
+    "sha256": "73a532296c239b769676acbb7bee83b115a43cf938b20751c7c3d20305b068dc",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "08-item.png",
+    "caption": "의상실 · 마이크 이름과 설명",
+    "sha256": "351ff9a4f8778392e55d67d1cfc52adcd16c548200328a3801065592e0d4a4f5",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "09-location.png",
+    "caption": "영상 · 위치 표기와 정렬",
+    "sha256": "08f8fe22eeda836ff53931a19f315e8f84a26a16b8a0aec95f2a6d29541e3f88",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "10-jaguar.png",
+    "caption": "영상 · 제규어 소개 이름표와 대사",
+    "sha256": "9d396ba3011802207b62d1c84f0474456c779b2ccc43aacff7e4deb470f661f2",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "11-pudding.png",
+    "caption": "영상 · 푸딩 소개 이름표와 대사",
+    "sha256": "cc06b7f12d20de045884544154d4cbaaf800cfca7d497c6587365e045458d635",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "12-report2-movie.png",
+    "caption": "리포트 2 · 영상 속 안내와 대사 자막",
+    "sha256": "b38f3985e3bba35af764de2c15d18b76f16b3ebfc081d29afb6264e3c3e373a9",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "13-report3-dialogue.png",
+    "caption": "리포트 3 · 플레이 중 대사 자막",
+    "sha256": "d4584c16c760518a2081847f8975e9d8a029ba235310cf1df6713452379866e0",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "14-report4-dialogue.png",
+    "caption": "리포트 4 · 플레이 중 대사 자막",
+    "sha256": "4fb865b67ce6ae8a8ff9293e9f0ae69c0398f6e8a82088017d94554994745d0e",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "15-report5-dialogue.png",
+    "caption": "리포트 5 · 플레이 중 대사 자막",
+    "sha256": "1ccfee9e3c873b75f9ae6fb92d36a42e4ba127fb0dd0e86d4eecc5795347a0ad",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  },
+  {
+    "file": "16-result.png",
+    "caption": "결과 화면 · 시청률, 구조율, 숨은 요소 발견",
+    "sha256": "281a31dcb4a92e75602b93dc302b952b9babaa9ff13b76b35f404b2dd92d6a2b",
+    "kind": "existing_gameplay_capture",
+    "image_edited_or_resized": false
+  }
+]

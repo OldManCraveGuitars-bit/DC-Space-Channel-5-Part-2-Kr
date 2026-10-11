@@ -1,0 +1,32 @@
+{
+  "version": "1.1",
+  "algorithm": "SHA-256",
+  "platform": "Dreamcast",
+  "source": "Space Channel 5 Part 2 (Japan)",
+  "files": [
+    {
+      "name": "Space Channel 5 Part 2 (Japan) (Track 1).bin",
+      "size": 1980384,
+      "before_sha256": "0253b2fb053cd253cec3a114be98359c6fc8c5be25c84acbfc3bcf732c2fbb17",
+      "after_sha256": "0253b2fb053cd253cec3a114be98359c6fc8c5be25c84acbfc3bcf732c2fbb17"
+    },
+    {
+      "name": "Space Channel 5 Part 2 (Japan) (Track 2).bin",
+      "size": 2076816,
+      "before_sha256": "98738afbc741875fcdb5e5fe695cadfb60e492b66820b1e901ba2254f226c203",
+      "after_sha256": "98738afbc741875fcdb5e5fe695cadfb60e492b66820b1e901ba2254f226c203"
+    },
+    {
+      "name": "Space Channel 5 Part 2 (Japan) (Track 3).bin",
+      "size": 1185760800,
+      "before_sha256": "af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f",
+      "after_sha256": "3c73a2e38f7ce2b674d71ee230f71e84102232a78acb8863c6081166fb76e398"
+    },
+    {
+      "name": "Space Channel 5 Part 2 (Japan).cue",
+      "size": 384,
+      "before_sha256": "055f8098a992cda53aaee073dea1c8aa0dd0211c273a0ad3f408f92afccf904f",
+      "after_sha256": "055f8098a992cda53aaee073dea1c8aa0dd0211c273a0ad3f408f92afccf904f"
+    }
+  ]
+}

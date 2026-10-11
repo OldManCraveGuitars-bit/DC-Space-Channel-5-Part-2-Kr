@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.cs text eol=lf
+*.png binary
+docs/licenses/*.txt -whitespace
