@@ -1,9 +1,12 @@
 {
   "status": "passed",
-  "candidate_core_manifest_sha256": "773c180185b737cd588d556bf3eb48775f06783e12a6b4eed4bfc7f7c9dff427",
-  "trial_track_sha256": "5217c7f807825f411e886ac4d76c6c60e7975589aae0dd2b1a9d23568560f435",
+  "candidate_core_manifest_sha256": "b50621c261913fcf9c44422a0bf7cd1aca059c3dc7bfa67f5f5b8526e389e7c4",
+  "trial_track_sha256": "2c0182ce6b49cee69dff70bca6cf35c7f3c77610acb213ef58dda45faab07b8d",
   "changed_lbas": [
     45025,
+    45125,
+    45126,
+    45127,
     45128,
     45129,
     45130,
@@ -23,11 +26,12 @@
     45144,
     45145,
     45146,
+    45147,
     548450
   ],
   "changed_assets": {
-    "1ST_READ.BIN": "873b61a07030486142f2567efb693c92a973b9aa489b0169ed872ec9d4edde2b",
-    "ZENFONT.GD": "f21218c322728e121507e94ff5bfeb29b482bb9ef9280dc1ec787eb8ec7d0ab9"
+    "1ST_READ.BIN": "24de974d00814df4bcc5043cb950426b880097b20c8bb339d2b91627c1c85761",
+    "ZENFONT.GD": "51e6524e5bf15ca41b241d39abb7c18e595f0b2b648126b20ccb007bda964144"
   },
   "all_other_raw_sectors_exact": true,
   "IP_BIN_exact": true,

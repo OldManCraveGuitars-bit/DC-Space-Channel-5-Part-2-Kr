@@ -1,13 +1,13 @@
 {
   "status": "passed",
-  "candidate_manifest_sha256": "773c180185b737cd588d556bf3eb48775f06783e12a6b4eed4bfc7f7c9dff427",
+  "candidate_manifest_sha256": "b50621c261913fcf9c44422a0bf7cd1aca059c3dc7bfa67f5f5b8526e389e7c4",
   "root_source_and_SH4_review_completed": true,
   "original_font_instructions_semantically_identical": 28,
   "actual_bootstrap_and_sdk_instructions_executed_in_bounded_model": true,
   "model_instruction_counts": [
-    15346,
-    15346,
-    15346
+    15307,
+    15307,
+    15307
   ],
   "D_writeback_before_first_P2_fetch": true,
   "I_invalidation_before_P1_entry": true,
@@ -17,5 +17,20 @@
   "hardware_tested": false,
   "emulator_gameplay_or_audio_QA": false,
   "limitation": "Instruction model verifies sequence/registers, not physical SH4 cache timing or ODE firmware.",
-  "verifier_sha256": "3e34e51896a462af15b7ea797b65db9d2b48896c89ec1e2c1dfc766af8a8aeba"
+  "verifier_sha256": "6e04c1afc13b3a1cb20b943cc3eba9d7141284fcb4340c5d01af36e2cf858a77",
+  "version": "1.102",
+  "subtitle_initializer_actual_SH4_instruction_model": true,
+  "initializer_cases": [
+    "cold boot",
+    "already initialized",
+    "unexpected original bytes"
+  ],
+  "all_36_executable_halfword_writes_interrupt_masked": true,
+  "SR_and_saved_registers_restored": true,
+  "BIOS_font_access_removed": true,
+  "ASCII_in_font_reserve": true,
+  "ASCII_bytes": 3456,
+  "explicit_zero_BSS_bytes": 1580,
+  "caption_table_and_bindings_byte_exact": true,
+  "only_C_function_changed": "subtitle_init"
 }

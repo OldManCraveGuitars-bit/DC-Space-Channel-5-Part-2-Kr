@@ -1,2 +1,2 @@
-b1a8a8705b7b4c5df20b72c2f217bac9c8a1b699a1b3708d840723233afe1805  DC-Space-Channel-5-Part-2-Kr-v1.101-Patch.zip
-9f0bcf10f9caf4d43072acdbdaaff40c24f37fde00cd9f08d73a0feffc52ced6  original-and-output-hashes.json
+55837c2b8274ffd5fc8cbed9ad08893d8ccdd862bae7ca882047f1397405d6bc  DC-Space-Channel-5-Part-2-Kr-v1.102-Patch.zip
+9e36e9902f440c0eb71dbc612fe00fb79a8fcc09b2d8afbc2022d2950eef9d84  original-and-output-hashes.json
