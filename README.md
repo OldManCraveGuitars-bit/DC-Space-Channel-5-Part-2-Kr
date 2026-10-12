@@ -1,6 +1,6 @@
 # DC-Space-Channel-5-Part-2-Kr
 
-## 스페이스 채널 5 파트 2 · 비공식 한글판 정식 버전 V1.103
+## 스페이스 채널 5 파트 2 · 비공식 한글판 정식 버전 V1.104
 
 **Dreamcast / 일본판 기반 / KOREAN LOCALIZATION BY GIKAKNO**
 
@@ -8,7 +8,7 @@
 
 Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 엔딩 가사를 한국어로 즐길 수 있도록 만든 비공식 패치입니다. 원래 음성과 영문 로고의 분위기를 살리고, 게임 안에 한국어 표시와 **6단계 판정 설정**을 추가했습니다.
 
-**[V1.103 다운로드](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.103)** · **[패치 ZIP 바로 받기](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/download/v1.103/DC-Space-Channel-5-Part-2-Kr-v1.103-Patch.zip)**
+**[V1.104 다운로드](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.104)** · **[패치 ZIP 바로 받기](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/download/v1.104/DC-Space-Channel-5-Part-2-Kr-v1.104-Patch.zip)**
 
 [설치 방법](docs/INSTALL.md) · [판정 설정 상세](docs/JUDGMENT.md) · [스크린샷 16장](docs/GALLERY.md) · [패치 전후 해시](docs/HASHES.md) · [변경 내역](CHANGELOG.md)
 
@@ -16,7 +16,7 @@ Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 
 
 | 항목 | 내용 |
 | --- | --- |
-| 버전 | **V1.103 · 비공식 한글판 정식 버전** |
+| 버전 | **V1.104 · 비공식 한글판 정식 버전** |
 | 기종 | SEGA Dreamcast |
 | 대상 원본 | **Space Channel 5 Part 2 (Japan)**, CUE 1개 + BIN 3개 |
 | 한국어화 | **GIKAKNO** |
@@ -24,13 +24,13 @@ Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 
 | 판정 설정 | **1~6단계**, 기본값 1, VMU 자동 저장 |
 | 원작 음성 | 유지 · 추가 한국어 자막 |
 
-게임 원본·완성 ROM·BIOS는 포함하지 않습니다. 지정된 일본판 원본이 필요합니다. 이전 한글 패치본에 덧씌우지 말고 원본에서 V1.103을 한 번 적용해 주세요.
+게임 원본·완성 ROM·BIOS는 포함하지 않습니다. 지정된 일본판 원본이 필요합니다. 이전 한글 패치본에 덧씌우지 말고 원본에서 V1.104을 한 번 적용해 주세요.
 
-## V1.103 실기 부팅 재대응
+## V1.104 디스크 배치 수정
 
-**V1.102에서도 SEGA 로고 뒤 정지가 계속된다는 실기 결과를 받았습니다.** V1.103은 부팅 초기에 설치하던 추가 자막 훅 6개를 타이틀 생성 시점으로 옮겼습니다. 로고 단계에서 추가 자막 코드가 음성 핸들을 매 프레임 조회하는 경로를 제거했습니다.
+**V1.103도 실기에서 멈춘다는 제보를 받아 디스크 배치를 수정했습니다.** 타이틀 파일과 의상실 이미지가 원본의 마지막 150섹터 여백에 배치되어 있었습니다. 두 파일을 정상 데이터 영역으로 옮기고, 끝부분은 원본과 바이트 단위로 동일하게 복원했습니다.
 
-**초기화 순서상 위험을 줄인 수정이며, 실제 Dreamcast/ODE에서 해결됐는지는 아직 확인되지 않았습니다.** 원인 확정이나 실기 부팅 성공으로 안내하지 않습니다.
+**실제 Dreamcast/ODE에서 해결됐는지는 아직 미확인입니다.** 이번에는 실 BIOS 파일을 사용하는 에뮬레이터에서 타이틀 파일 적재와 초기화 진입을 확인했습니다. 실기 성공으로 안내하지 않습니다.
 
 [수정 내용과 확인 범위](docs/HARDWARE-BOOT.md)
 
@@ -47,8 +47,8 @@ Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 
 
 ## 적용 방법
 
-1. [릴리스](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.103)에서 **`DC-Space-Channel-5-Part-2-Kr-v1.103-Patch.zip`**을 받습니다.
-2. ZIP을 전부 압축 해제하고 **`SC5Part2KoreanPatch_v1.103.exe`**를 실행합니다.
+1. [릴리스](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/releases/tag/v1.104)에서 **`DC-Space-Channel-5-Part-2-Kr-v1.104-Patch.zip`**을 받습니다.
+2. ZIP을 전부 압축 해제하고 **`SC5Part2KoreanPatch_v1.104.exe`**를 실행합니다.
 3. 원본 CUE를 선택합니다. 같은 폴더에 원본 BIN 3개가 있어야 합니다.
 4. 원본 폴더 밖의 **아직 없는 새 결과 폴더**를 지정하고 **패치 적용**을 누릅니다.
 5. 실기 ODE에서는 출력 형식 **GDI**를 선택합니다. 완료 후 `disc.gdi`, `track01.bin`, `track02.raw`, `track03.bin`을 함께 기기에 넣습니다. CUE 출력은 별도로 선택할 수 있습니다.
@@ -95,7 +95,7 @@ Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 
 
 ## 스크린샷
 
-한글화 작업 중 저장한 실제 게임 화면 16장입니다. 기존 캡처를 원본 크기 그대로 수록했으며, V1.103의 모든 장면을 새로 촬영한 것은 아닙니다. 최신 후반부·엔딩 변경 사항은 변경 내역을 함께 참고해 주세요.
+한글화 작업 중 저장한 실제 게임 화면 16장입니다. 기존 캡처를 원본 크기 그대로 수록했으며, V1.104의 모든 장면을 새로 촬영한 것은 아닙니다. 최신 후반부·엔딩 변경 사항은 변경 내역을 함께 참고해 주세요.
 
 | 타이틀 · 한글판 표시 | 메인 메뉴 · 의상실과 옵션 안내 |
 | :---: | :---: |
@@ -141,17 +141,17 @@ Space Channel 5 Part 2의 메뉴와 설명, 대사·영상 자막, 후반부와 
 af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f
 ```
 
-**Track 3 · 패치 후 / V1.103**
+**Track 3 · 패치 후 / V1.104**
 
 ```text
-581737e9d7d757eecc49a6862d06b8e879300379d0468c6a8aee4a6a053836fc
+28df43bd4191f9f6f0a8257459f4654b4795f752ea19da89b76a2a17d3c83873
 ```
 
-| 파일 | 크기 (바이트) | V1.103 적용 결과 |
+| 파일 | 크기 (바이트) | V1.104 적용 결과 |
 | --- | ---: | --- |
 | Track 1 BIN | 1,980,384 | 원본과 동일 |
 | Track 2 BIN | 2,076,816 | 원본과 동일 |
-| Track 3 BIN | 1,185,760,800 | 위 V1.103 해시로 변경 |
+| Track 3 BIN | 1,185,760,800 | 위 V1.104 해시로 변경 |
 | CUE | 384 | 원본과 동일 |
 
 **[원본·CUE·GDI 전체 파일 해시](docs/HASHES.md)** · [기계 판독용 JSON](docs/original-and-output-hashes.json) · [다운로드 파일 SHA256SUMS](docs/SHA256SUMS.txt) · [적용 검사 기록](docs/verification/patch-roundtrip.json)
@@ -161,9 +161,9 @@ ZIP과 게임 이미지의 해시는 별개입니다. GDI 설명 파일, 오디�
 ## 안내와 제보
 
 - 일반 Flycast 코어에서 기존 판정 메뉴와 VMU 저장·복원 시험 기록을 확보했습니다. 실기·ODE 호환 여부는 별도 확인 대상입니다.
-- 이번 V1.103 배포 검사는 최종 패치 적용과 결과 파일 일치 여부를 중심으로 진행했습니다. 상세 범위는 [검증 기록](docs/VERIFICATION.md)에 적었습니다.
+- 이번 V1.104 배포 검사는 최종 패치 적용과 결과 파일 일치 여부를 중심으로 진행했습니다. 상세 범위는 [검증 기록](docs/VERIFICATION.md)에 적었습니다.
 - 자막이나 표시 문제는 [Issues](https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/issues)에 스테이지, 발생 위치, 직전 대사와 스크린샷을 남겨 주세요. 실행 중인 Track 3 해시도 함께 있으면 버전을 구분하기 좋습니다.
-- 이 저장소의 V1.103은 비공식 한글 패치의 배포 버전입니다. SEGA 공식 한국어판을 의미하지 않습니다.
+- 이 저장소의 V1.104은 비공식 한글 패치의 배포 버전입니다. SEGA 공식 한국어판을 의미하지 않습니다.
 
 ## 크레딧
 

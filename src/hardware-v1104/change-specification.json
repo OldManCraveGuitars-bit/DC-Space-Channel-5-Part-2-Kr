@@ -1,0 +1,28 @@
+{
+  "version": "1.104",
+  "scope": "ISO extents and GD-ROM run-out only",
+  "relocations": [
+    {
+      "name": "TITLE.BIN",
+      "previous_lba": 549000,
+      "new_lba": 45856,
+      "bytes": 96044,
+      "sectors": 47,
+      "sha256": "c64df57c8dcb717353157d2b94f6a9a32ddeaa1bbcf57acea96fbaa8ec25c7e6",
+      "destination_originally_zero": true
+    },
+    {
+      "name": "COSROOM.PVM",
+      "previous_lba": 549048,
+      "new_lba": 45920,
+      "bytes": 147120,
+      "sectors": 72,
+      "sha256": "28a7b1a0cd5993c0aeda8b399251f2cad4d5b0eb280919e127041ebbebc580fa",
+      "destination_originally_zero": true
+    }
+  ],
+  "all_file_contents_unchanged": true,
+  "runout_restored_from_original": true,
+  "native_code_changes": false,
+  "hardware_tested": false
+}

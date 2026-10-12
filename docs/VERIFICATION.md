@@ -1,12 +1,12 @@
-# V1.103 배포 확인 범위
+# V1.104 배포 확인 범위
 
-**V1.102에서도 SEGA 로고 뒤 정지가 계속된다는 실기 결과를 받았습니다.** V1.103은 부팅 초기에 설치하던 추가 자막 훅 6개를 타이틀 생성 시점으로 옮겼습니다. 로고 단계에서 추가 자막 코드가 음성 핸들을 매 프레임 조회하는 경로를 제거했습니다.
+**V1.103도 실기에서 멈춘다는 제보를 받아 디스크 배치를 수정했습니다.** 타이틀 파일과 의상실 이미지가 원본의 마지막 150섹터 여백에 배치되어 있었습니다. 두 파일을 정상 데이터 영역으로 옮기고, 끝부분은 원본과 바이트 단위로 동일하게 복원했습니다.
 
-**초기화 순서상 위험을 줄인 수정이며, 실제 Dreamcast/ODE에서 해결됐는지는 아직 확인되지 않았습니다.** 원인 확정이나 실기 부팅 성공으로 안내하지 않습니다.
+**실제 Dreamcast/ODE에서 해결됐는지는 아직 미확인입니다.** 이번에는 실 BIOS 파일을 사용하는 에뮬레이터에서 타이틀 파일 적재와 초기화 진입을 확인했습니다. 실기 성공으로 안내하지 않습니다.
 
-이번 확인은 초기화 호출 순서, 타이틀 전후의 훅 설치 시점, 변경 23개 섹터, 배포 CUE/GDI 결과에 한정했습니다. 실기 부팅 성공 확인은 아직 받지 못했습니다.
+이번 확인은 파일 배치·동일성, 마지막 150섹터 복원, 실 BIOS를 쓰는 에뮬레이터의 부팅 경로, 배포 적용 결과에 한정했습니다.
 
-[명령 검사](verification/boot-source-review.json) · [설치 시점 검사](verification/boot-timing.json) · [디스크 검사](verification/boot-disc-review.json) · [패치 적용 검사](verification/patch-roundtrip.json) · [배포 명세](verification/release-manifest.json)
+[코드 동일성](verification/boot-source-review.json) · [부팅 상태](verification/boot-timing.json) · [디스크 검사](verification/boot-disc-review.json) · [패치 적용](verification/patch-roundtrip.json) · [배포 명세](verification/release-manifest.json)
 
 ## 기존 확인 기록을 유지한 것
 

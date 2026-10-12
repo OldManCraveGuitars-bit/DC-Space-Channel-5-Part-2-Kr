@@ -1,35 +1,60 @@
 {
+  "version": "1.104",
   "status": "passed",
-  "candidate_manifest_sha256": "e7843ac0893a89a58274755fbe25ba370913df05841a95ede98fa62fb3830a7c",
-  "root_source_and_SH4_review_completed": true,
-  "original_font_instructions_semantically_identical": 28,
-  "actual_bootstrap_and_sdk_instructions_executed_in_bounded_model": true,
-  "model_instruction_counts": [
-    15346,
-    15346,
-    15346
+  "candidate_manifest_sha256": "519e20d9f5de2b0f6b681595937b5219611ff6c2e30f6ebb09db815a075c3a1c",
+  "native_code_unchanged_from": "1.103",
+  "inherited_source_review_sha256": "d9d39f1f8086cf11c67321d44eee713cfcbbfd9e95cb4aa1fd1a768fd36a1492",
+  "files": [
+    {
+      "file": "1ST_READ.BIN",
+      "sha256": "193b4f001a59311d5a31c1dcb290cc1a59c966529c50cd3c8c3d5136b3115f49"
+    },
+    {
+      "file": "core.bin",
+      "sha256": "28e6320930838037183c0952064cc9e09b04fd8aa23b5eb1027564d89ac311c3"
+    },
+    {
+      "file": "core.elf",
+      "sha256": "2d4c07708a0511f9b6b823bca3c72388b65cd50326fb4b0499476077c29b6ca5"
+    },
+    {
+      "file": "disassembly.txt",
+      "sha256": "bb596e38383b3b2995ad4edcbaaae70c0933f433e75248586c1fab3bd46c459f"
+    },
+    {
+      "file": "font-hook.bin",
+      "sha256": "df55f079ef85fa92a13b3b185e645ce6eed7123f1676d96e8125fab9910852f7"
+    },
+    {
+      "file": "judgment-hook.bin",
+      "sha256": "ae5535567c37d27ce113fcd44a61512eb160f62972bc5e5e6f16552e92c76db2"
+    },
+    {
+      "file": "native-source/settings-core.ld",
+      "sha256": "ca8a1139ceb39ed4b570951895ba8359c9b46fba2c0b32d224e021b5098cb38d"
+    },
+    {
+      "file": "native-source/settings-core.S",
+      "sha256": "8e7712e6ff2a34a5e9fc7b6a538742617cd11121712db1205a446af0984c7c40"
+    },
+    {
+      "file": "subtitle-extra.bin",
+      "sha256": "c595693009095a0e98c3008b20f7f6f30b0041c7db3506237cdb49d811e85925"
+    },
+    {
+      "file": "symbols.txt",
+      "sha256": "70260e35e5a48c8d36292f1863d8b4c5db6afcfc560b321ebd308effc3897a10"
+    },
+    {
+      "file": "title-hook.bin",
+      "sha256": "de8746c473286a8cdcffcddf5fb6075cd1f0b1310a3ab5f69faadc591ec59ffd"
+    },
+    {
+      "file": "ZENFONT.GD",
+      "sha256": "cbe628fbd8a814b9124cf4177b8bfb1df4472d7505e257878c92a02b00669fd7"
+    }
   ],
-  "D_writeback_before_first_P2_fetch": true,
-  "I_invalidation_before_P1_entry": true,
-  "PR_SP_font_argument_callee_saved_registers_preserved": true,
-  "all_caption_table_bytes_identical": true,
-  "payload_bss_below_heap": true,
+  "new_executable_code_changes": false,
   "hardware_tested": false,
-  "emulator_gameplay_or_audio_QA": false,
-  "limitation": "Instruction model verifies sequence/registers, not physical SH4 cache timing or ODE firmware.",
-  "verifier_sha256": "f4d473fcfc16c93fd488d2d93c9a7fc5e7fd6a85d8f55bdfc4b10086ab732942",
-  "version": "1.103",
-  "font_boot_calls": [
-    "_state_init",
-    "_original_font_init"
-  ],
-  "title_tick_calls": [
-    "_subtitle_init",
-    "_original_title_init"
-  ],
-  "modified_wrappers_actual_SH4_instruction_model": true,
-  "all_C_objects_reused_byte_exact": true,
-  "font_and_caption_prefix_byte_exact": true,
-  "all_six_hooks_original_until_TITLE": true,
-  "explicit_zero_BSS_bytes": 1580
+  "new_audio_or_screen_QA": false
 }

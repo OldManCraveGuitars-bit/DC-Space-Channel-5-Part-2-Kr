@@ -1,11 +1,11 @@
 {
   "status": "passed",
-  "version": "1.103",
+  "version": "1.104",
   "windows_applier_executed": true,
   "source_files_preserved": true,
   "all_four_output_hashes_match": true,
-  "patch_sha256": "0f8b4678bcad20faab103328185bef877d8edfa92aec3deef565515918aad2b8",
-  "applier_sha256": "8e36a13a439ea8e6f3bc1294ec77b473b765e7b932f7fd361cd795301c7006c4",
+  "patch_sha256": "f620dc48e48697d37c676e6307175534b477b642efcdc84ba34a8aad8c37fff9",
+  "applier_sha256": "91cdc9e5c0003e28d2a1cdde55df427868f558a18d2c7792f18b11da3da81d42",
   "files": [
     {
       "name": "Space Channel 5 Part 2 (Japan) (Track 1).bin",
@@ -29,7 +29,7 @@
       "name": "Space Channel 5 Part 2 (Japan) (Track 3).bin",
       "size": 1185760800,
       "before_sha256": "af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f",
-      "after_sha256": "581737e9d7d757eecc49a6862d06b8e879300379d0468c6a8aee4a6a053836fc",
+      "after_sha256": "28df43bd4191f9f6f0a8257459f4654b4795f752ea19da89b76a2a17d3c83873",
       "changed_ranges": 25680,
       "replacement_bytes": 29965569,
       "copied_from_original_bytes": 0
@@ -65,7 +65,7 @@
     {
       "name": "track03.bin",
       "size": 1185760800,
-      "sha256": "581737e9d7d757eecc49a6862d06b8e879300379d0468c6a8aee4a6a053836fc"
+      "sha256": "28df43bd4191f9f6f0a8257459f4654b4795f752ea19da89b76a2a17d3c83873"
     }
   ],
   "track2_pregap_sectors_removed": 150,
