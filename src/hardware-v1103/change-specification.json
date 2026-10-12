@@ -1,0 +1,43 @@
+{
+  "version": "1.103",
+  "base_manifest_sha256": "b50621c261913fcf9c44422a0bf7cd1aca059c3dc7bfa67f5f5b8526e389e7c4",
+  "reason": "Font-load initialization installed CRI hooks and began polling audio handles during the logo/startup phase. Defer installation to TITLE object creation.",
+  "original_main_sha256": "05ccc4b7620871b903631cf790b47af2750e9c684abfa8b27e9fd06dcbba8383",
+  "original_font_bytes": "e62f12ded62f224f12d3e65d441e0b43e36410d20b42036411d3061e0b43e364d82d0589264fd3640ed3f66d2b43f66e264ff66d0b00f66e",
+  "base_main_sha256": "40882d5fd6193c128b3dca87d32b08663370dab3a8e16ba35f89ff6dbc228480",
+  "changed_main_offset": 175574,
+  "bytes": 56,
+  "original_bytes": "e62f12ded62f224f12d3e65d441e0b43e36410d20b42036411d3061e0b43e364d82d0589264fd3640ed3f66d2b43f66e264ff66d0b00f66e",
+  "previous_bytes": "224f462f05d405d506d00b400900f664264f04d02b400900090000002f8c78920000b663018c30002fac0900090009000900090009000900",
+  "replacement_bytes": "224f462f05d405d506d00b400900f664264f04d02b400900090000002f8ccc920000b663018c30002fac0900090009000900090009000900",
+  "source_sha256": "8e7712e6ff2a34a5e9fc7b6a538742617cd11121712db1205a446af0984c7c40",
+  "reused_objects": [
+    {
+      "file": "core.o",
+      "sha256": "013547cc5dea53024f31d542d18dbea0d087261f66f34a898e39463994052934"
+    },
+    {
+      "file": "judgment-phase.o",
+      "sha256": "38ad2a120107e50bd2316c8b75bc6d8f4cac6a6666cb4d05ddd89acb4a23ce3f"
+    },
+    {
+      "file": "judgment-phase-asm.o",
+      "sha256": "c8b82114f49c676cb7ee891ab4e5e8304c36414f9e73ed88f59bd0085952e90c"
+    },
+    {
+      "file": "voice-subtitles.o",
+      "sha256": "97b8fd80341a067c6ec827a2ae9c7a1621ba82ee6dfd723b003301acb54ff275"
+    },
+    {
+      "file": "voice-subtitles-asm.o",
+      "sha256": "e5a48ee8323002a9a31dcf806873ced73197ac0e3062f640e01db00453c0f8eb"
+    }
+  ],
+  "caption_data_identical": true,
+  "all_C_objects_identical": true,
+  "early_subtitle_install_removed": true,
+  "deferred_install_entry": "_native_title_entry",
+  "title_original_prologue": "e62f224ff87f0fd3522f611f",
+  "title_replacement": "01d02b400900090050002f8c",
+  "hardware_tested": false
+}

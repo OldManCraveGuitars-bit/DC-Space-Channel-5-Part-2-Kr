@@ -1,12 +1,9 @@
 {
   "status": "passed",
-  "candidate_core_manifest_sha256": "b50621c261913fcf9c44422a0bf7cd1aca059c3dc7bfa67f5f5b8526e389e7c4",
-  "trial_track_sha256": "2c0182ce6b49cee69dff70bca6cf35c7f3c77610acb213ef58dda45faab07b8d",
+  "candidate_core_manifest_sha256": "e7843ac0893a89a58274755fbe25ba370913df05841a95ede98fa62fb3830a7c",
+  "trial_track_sha256": "581737e9d7d757eecc49a6862d06b8e879300379d0468c6a8aee4a6a053836fc",
   "changed_lbas": [
     45025,
-    45125,
-    45126,
-    45127,
     45128,
     45129,
     45130,
@@ -27,17 +24,20 @@
     45145,
     45146,
     45147,
-    548450
+    548450,
+    549000
   ],
   "changed_assets": {
-    "1ST_READ.BIN": "24de974d00814df4bcc5043cb950426b880097b20c8bb339d2b91627c1c85761",
-    "ZENFONT.GD": "51e6524e5bf15ca41b241d39abb7c18e595f0b2b648126b20ccb007bda964144"
+    "1ST_READ.BIN": "ecf6782a924ee1af91b3c13565f7e008995ae56a5bfef672c6dfb9805a273964",
+    "ZENFONT.GD": "cbe628fbd8a814b9124cf4177b8bfb1df4472d7505e257878c92a02b00669fd7",
+    "TITLE.BIN": "c64df57c8dcb717353157d2b94f6a9a32ddeaa1bbcf57acea96fbaa8ec25c7e6"
   },
   "all_other_raw_sectors_exact": true,
   "IP_BIN_exact": true,
   "all_ISO_extents_preserved": true,
-  "preserved_ISO_files": 251,
+  "preserved_ISO_files": 250,
   "main_bootstrap_only_changed": true,
+  "TITLE_entry_12_bytes_changed": true,
   "actual_hardware_tested": false,
   "new_audio_playback_or_screen_QA": false
 }

@@ -1,0 +1,62 @@
+{
+  "version": "1.103",
+  "status": "passed",
+  "emulator": "isolated Flycast",
+  "execution_configuration": {
+    "Dynarec.Enabled": "no (launcher setting)",
+    "project_execution_preference": "jit",
+    "caption_observer": false
+  },
+  "before_TITLE_hooks_original": 6,
+  "after_TITLE_hooks_installed": 6,
+  "subtitle_install_error": 0,
+  "subtitle_frames": 716,
+  "actual_title_hook": "01d02b400900090050002f8c",
+  "hooks": [
+    {
+      "name": "frame_end",
+      "address": "0x8c052c64",
+      "bytes": "01d02b4009000900dc162f8c"
+    },
+    {
+      "name": "stream_open",
+      "address": "0x8c06838a",
+      "bytes": "01d02b400900d8122f8c0900"
+    },
+    {
+      "name": "afs_start",
+      "address": "0x8c069af8",
+      "bytes": "01d02b4009000900100e2f8c"
+    },
+    {
+      "name": "fname_start",
+      "address": "0x8c069b88",
+      "bytes": "01d02b4009000900980d2f8c"
+    },
+    {
+      "name": "mem_start",
+      "address": "0x8c069bd6",
+      "bytes": "01d02b4009002c162f8c0900"
+    },
+    {
+      "name": "sj_start",
+      "address": "0x8c069002",
+      "bytes": "01d02b40090088162f8c0900"
+    }
+  ],
+  "native_settings_level": 1,
+  "VMU_reads": 1,
+  "VMU_writes": 0,
+  "private_VMU_copy": true,
+  "guest_memory_writes": false,
+  "savestate_loads": false,
+  "screenshots": false,
+  "audio_capture": false,
+  "audio_output_muted": true,
+  "inputs": [
+    "START"
+  ],
+  "hardware_tested": false,
+  "candidate_manifest_sha256": "e7843ac0893a89a58274755fbe25ba370913df05841a95ede98fa62fb3830a7c",
+  "limitation": "Observed cold-boot hook timing and main-menu settings progress in an emulator; physical hardware/ODE unresolved."
+}

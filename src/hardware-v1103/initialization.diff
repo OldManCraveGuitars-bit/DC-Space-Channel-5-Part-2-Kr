@@ -1,0 +1,77 @@
+--- v1.102/settings-core.S
++++ v1.103/settings-core.S
+@@ -42,0 +43,9 @@
++    .long 0
++
++    .global _native_title_entry
++_native_title_entry:
++    mov.l 1f,r0
++    jmp @r0
++    nop
++    nop
++1:  .long _title_boot_init
+@@ -84,0 +94,53 @@
++
++/* Keep CRI hooks out of boot/logo initialization. The patched TITLE
++ * creation entry installs them before the original title object is created.
++ * This runs independently of options/menu drawing or VMU availability.
++ */
++    .align 2
++    .global _font_boot_init
++_font_boot_init:
++    sts.l pr,@-r15
++    mov.l r4,@-r15
++    mov.l boot_state_init,r0
++    jsr @r0
++    nop
++    mov.l @r15+,r4
++    lds.l @r15+,pr
++    mov.l boot_font_init,r0
++    jmp @r0
++    nop
++    .align 2
++boot_state_init: .long _state_init
++boot_font_init: .long _original_font_init
++
++    .global _title_boot_init
++_title_boot_init:
++    sts.l pr,@-r15
++    mov.l r4,@-r15
++    mov.l r5,@-r15
++    mov.l r6,@-r15
++    mov.l r7,@-r15
++    mov.l title_subtitle_init,r0
++    jsr @r0
++    nop
++    mov.l @r15+,r7
++    mov.l @r15+,r6
++    mov.l @r15+,r5
++    mov.l @r15+,r4
++    lds.l @r15+,pr
++    /* Original TITLE.BIN 8c270000..8c27000b prologue. */
++    .global _original_title_init
++_original_title_init:
++    mov.l r14,@-r15
++    sts.l pr,@-r15
++    add #-8,r15
++    mov.l title_create,r3
++    mov.l r5,@r15
++    mov.l r6,@(4,r15)
++    mov.l title_resume,r0
++    jmp @r0
++    nop
++    .align 2
++title_subtitle_init: .long _subtitle_init
++title_create: .long 0x8c274f14
++title_resume: .long 0x8c27000c
+@@ -136 +198 @@
+-boot_ready: .long _native_font_init
++boot_ready: .long _font_boot_init
+@@ -158,0 +221,7 @@
++
++    .section .title_hook,"ax"
++    mov.l 1f,r0
++    jmp @r0
++    nop
++    nop
++1:  .long _native_title_entry
