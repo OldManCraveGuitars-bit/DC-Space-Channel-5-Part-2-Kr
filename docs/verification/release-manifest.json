@@ -1,16 +1,16 @@
 {
-  "version": "1.104",
+  "version": "1.105",
   "release_type": "비공식 한글판 정식 버전",
   "game": "Space Channel 5 Part 2 (Japan)",
   "platform": "Dreamcast",
   "localization": "GIKAKNO",
   "patch_format": "SC5P2KR2",
   "patch_file": "SC5P2KR.patch.gz",
-  "patch_sha256": "f620dc48e48697d37c676e6307175534b477b642efcdc84ba34a8aad8c37fff9",
-  "patch_bytes": 21415631,
+  "patch_sha256": "f556321869426046657c116b2b468478aba1d647bc374d799d22f398933bc8c6",
+  "patch_bytes": 21415675,
   "uncompressed_patch_bytes": 30299911,
-  "applier_file": "SC5Part2KoreanPatch_v1.104.exe",
-  "applier_sha256": "91cdc9e5c0003e28d2a1cdde55df427868f558a18d2c7792f18b11da3da81d42",
+  "applier_file": "SC5Part2KoreanPatch_v1.105.exe",
+  "applier_sha256": "1449bce02ae14d730006cee1079d55ca09b40f49f68cc246d92a0e4bb5639d5f",
   "files": [
     {
       "name": "Space Channel 5 Part 2 (Japan) (Track 1).bin",
@@ -34,7 +34,7 @@
       "name": "Space Channel 5 Part 2 (Japan) (Track 3).bin",
       "size": 1185760800,
       "before_sha256": "af9f53094aee1c3cba1cda183b0a60710732ec81c7e32a39e9127d816709a29f",
-      "after_sha256": "28df43bd4191f9f6f0a8257459f4654b4795f752ea19da89b76a2a17d3c83873",
+      "after_sha256": "01f0a66568bcab8a135a9843d78ce808015478f2efd6e1cd4fa17fa3bfb539f5",
       "changed_ranges": 25680,
       "replacement_bytes": 29965569,
       "copied_from_original_bytes": 0
@@ -78,7 +78,7 @@
     {
       "name": "track03.bin",
       "size": 1185760800,
-      "sha256": "28df43bd4191f9f6f0a8257459f4654b4795f752ea19da89b76a2a17d3c83873"
+      "sha256": "01f0a66568bcab8a135a9843d78ce808015478f2efd6e1cd4fa17fa3bfb539f5"
     }
   ]
 }

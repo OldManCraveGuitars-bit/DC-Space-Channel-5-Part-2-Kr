@@ -13,8 +13,8 @@ using System.Windows.Forms;
 // Original files are opened for reading only. A new folder is published only
 // after every result hash matches; existing output folders are never replaced.
 internal static class PatchApplier {
-    const string PatchHash = "f620dc48e48697d37c676e6307175534b477b642efcdc84ba34a8aad8c37fff9";
-    const string BuildLabel = "비공식 한글판 정식 버전 V1.104";
+    const string PatchHash = "f556321869426046657c116b2b468478aba1d647bc374d799d22f398933bc8c6";
+    const string BuildLabel = "비공식 한글판 정식 버전 V1.105";
     const long PatchBytes = 30299911L;
     sealed class Range { public long Offset, SourceOffset = -1; public int Length; public byte[] Bytes; }
     sealed class FilePatch {

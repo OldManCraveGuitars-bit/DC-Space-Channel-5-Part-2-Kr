@@ -1,0 +1,36 @@
+{
+  "version": "1.105",
+  "issue": "https://github.com/OldManCraveGuitars-bit/DC-Space-Channel-5-Part-2-Kr/issues/1",
+  "source_voice_id": "R43VOICE.AFS:014",
+  "before": "하나 더 해!",
+  "after": "한 번 더 뒤!",
+  "corrected_source": "もうひとつうしろ！",
+  "record_index": 612,
+  "old_pointer": "0x8c2eaf96",
+  "new_pointer": "0x8c2efa00",
+  "font_pointer_offset": 169952,
+  "new_text_font_offset": 195072,
+  "old_text_hex": "b4071a05feff5a05feffbc0721800000",
+  "new_text_hex": "b607feff1a06feff5a05feff770521800000",
+  "layout": {
+    "line_widths": [
+      144
+    ],
+    "width": 144,
+    "lines": 1
+  },
+  "start_ms": 0,
+  "end_ms": 1064,
+  "timing_and_placement_preserved": true,
+  "other_caption_records_preserved": 732,
+  "executable_bytes_unchanged": true,
+  "executable_disassembly_identical": true,
+  "font_file_size_unchanged": true,
+  "base_manifest_sha256": "519e20d9f5de2b0f6b681595937b5219611ff6c2e30f6ebb09db815a075c3a1c",
+  "base_track3_sha256": "28df43bd4191f9f6f0a8257459f4654b4795f752ea19da89b76a2a17d3c83873",
+  "candidate_manifest_sha256": "86c40313cd65fc5dcef2269aec4f5ba0a61ad34812590dec7f2e1c9bf37c0374",
+  "new_audio_or_screen_QA": false,
+  "hardware_tested": false,
+  "status": "passed",
+  "new_executable_code_changes": false
+}
